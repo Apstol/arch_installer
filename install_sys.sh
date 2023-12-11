@@ -132,7 +132,7 @@ genfstab -U /mnt >> /mnt/etc/fstab
 # Persist important values for the next script
 echo "$isUefi" > /mnt/var_is_uefi
 echo "$hd" > /mnt/var_hd
-mv comp /mnt/comp
+mv computer_name /mnt/computer_name
 
 ############################################
 # Install the rest of the system in chroot #
