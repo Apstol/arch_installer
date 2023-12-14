@@ -9,9 +9,9 @@ timedatectl set-ntp true
 ##################
 
 dialog --defaultno --title "Are you sure?" --yesno \
-"This is my personal arch linux installation. \n\n\ 
-It will DESTROY EVERYTHING on one of your hard disks. \n\n\ 
-Don't say YES if you're not sure what you're doing. \n\n\ 
+"This is my personal arch linux installation. \n\n
+It will DESTROY EVERYTHING on one of your hard disks. \n\n
+Don't say YES if you're not sure what you're doing. \n\n
 Do you want to continue?" 15 60 || exit 
 
 dialog --no-cancel --inputbox "Enter a name for your computer." \
@@ -126,7 +126,7 @@ fi
 # Install linux, generate fstab #
 #################################
 
-pacstrap /mnt base base-devel linux linux-firmaware
+pacstrap /mnt base base-devel linux linux-firmware
 genfstab -U /mnt >> /mnt/etc/fstab
 
 # Persist important values for the next script
