@@ -50,5 +50,4 @@ if [ ! -d "$DOTFILES" ]; then
     "$DOTFILES" >/dev/null
 fi
 
-source "$DOTFILES/zsh/.zshenv"
 cd "$DOTFILES" && bash install.sh
