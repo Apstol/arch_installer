@@ -11,6 +11,8 @@ pacman --noconfirm -S dialog
 # Install bootloader #
 ######################
 
+pacman --noconfirm -S grub
+
 if [ "$isUefi" = 1 ]; then
     pacman -S --noconfirm efibootmgr
     grub-install --target=x86_64-efi \
