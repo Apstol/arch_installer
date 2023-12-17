@@ -1,11 +1,13 @@
 #!/usr/bin/env bash
 
+userDir="/home/$(whoami)"
+
 ################################
 # Install Aur and Aur packages #
 ################################
 
 aurInstall() {
-    curl -O "https://aur.achlinux.org/cgit/aur.git/snapshot/$1.tar.gz" \
+    curl -O "https://aur.archlinux.org/cgit/aur.git/snapshot/$1.tar.gz" \
     && tar -xvf "$1.tar.gz" \
     && cd "$1" \
     && makepkg --noconfirm -si \
@@ -40,11 +42,24 @@ do
     aurCheck "$line"
 done < /tmp/aur_queue
 
+############################
+# Set XDG user directories #
+############################
+
+xdg-user-dirs-update --set DESKTOP "$userDir/"
+xdg-user-dirs-update --set DOCUMENTS "$userDir/documents"
+xdg-user-dirs-update --set DOWNLOAD "$userDir/downloads"
+xdg-user-dirs-update --set MUSIC "$userDir/music"
+xdg-user-dirs-update --set TEMPLATES "$userDir/templates"
+xdg-user-dirs-update --set PUBLICSHARE "$userDir/public"
+xdg-user-dirs-update --set PICTURES "$userDir/pictures"
+xdg-user-dirs-update --set VIDEOS "$userDir/videos"
+
 ####################
 # Install dotfiles #
 ####################
 
-DOTFILES="/home/$(whoami)/dotfiles"
+DOTFILES="$userDir/dotfiles"
 if [ ! -d "$DOTFILES" ]; then
     git clone https://github.com/Apstol/dotfiles.git \
     "$DOTFILES" >/dev/null

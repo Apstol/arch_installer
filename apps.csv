@@ -4,6 +4,10 @@ essential,picom,X compositor
 essential,man,Manual
 essential,man-pages,Manual pages
 essential,tldr,Tldr pages
+essential,perl-file-mimeinfo,File opener and mimetype detector
+essential,xdg-user-dirs,XDG user directories manager
+essential,reflector,Utility for updating pacman's mirrorlist
+fonts,ttf-noto-nerd,Noto Nerd fonts
 network,openssh,Remote login tool for SSH protocol
 network,networkmanager, Network manager
 pipewire,pipewire,Multimedia framework
@@ -44,6 +48,7 @@ neovim,neovim,Text editor
 alacritty,alacritty,Terminal emulator
 firefox,firefox,Browser Firefox
 lf,lf,File manager
+lf,ctpv-git,File previewer
 sioyek,sioyek-git,PDF viewer
 qbittorrent,qbittorrent,BitTorrent client
 onlyoffice,onlyoffice-bin,Document editor
