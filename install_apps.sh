@@ -16,6 +16,7 @@ dialog --title "Welcome!" \
 #############################
 
 apps=("essential" "Essential" on
+      "fonts" "Fonts" on
       "network" "Network" on
       "pipewire" "Pipewire" on
       "tools" "Tools" on
